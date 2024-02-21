@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一日三餐和运动记录</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>一日三餐和运动记录</h2>
+    <div id="calendar"></div>
+    
+    <h3>记录详情</h3>
+    <label for="date">日期:</label>
+    <input type="date" id="date">
+    <div>
+        <label for="meals">餐饮:</label>
+        <textarea id="meals" placeholder="记录今日餐饮..."></textarea>
+    </div>
+    <div>
+        <label for="exercises">运动:</label>
+        <textarea id="exercises" placeholder="记录今日运动..."></textarea>
+    </div>
+    <div>
+        <label for="imageFile">图片:</label>
+        <input type="file" id="imageFile" accept="image/*">
+    </div>
+    <div>
+        <button id="goodBtn" onclick="setStatus('good')">好</button>
+        <button id="badBtn" onclick="setStatus('bad')">坏</button>
+    </div>
+    <button onclick="saveData()">保存</button>
+    <button onclick="deleteData()">删除记录</button>
+    
+    <!-- 模态框 -->
+    <div id="detailsModal">
+        <div id="detailsContent"></div>
+        <button onclick="closeModal()">关闭</button>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
